@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse All Games - PCGameFit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="all-games-style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-gamepad"></i>
+                    <h1>PCGameFit - All Games</h1>
+                </div>
+                <p class="tagline">Complete game database with 300+ titles</p>
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Checker
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Filter Section -->
+            <section class="filter-section">
+                <h2 class="section-title">
+                    <i class="fas fa-filter"></i>
+                    Filter by Category
+                </h2>
+                <div class="category-filters">
+                    <button class="category-btn active" data-category="all">
+                        <i class="fas fa-globe"></i>
+                        All Games
+                    </button>
+                    <button class="category-btn" data-category="Action">
+                        <i class="fas fa-fist-raised"></i>
+                        Action
+                    </button>
+                    <button class="category-btn" data-category="Adult">
+                        <i class="fas fa-user-secret"></i>
+                        Adult
+                    </button>
+                    <button class="category-btn" data-category="Adventure">
+                        <i class="fas fa-compass"></i>
+                        Adventure
+                    </button>
+                    <button class="category-btn" data-category="Anime">
+                        <i class="fas fa-dragon"></i>
+                        Anime
+                    </button>
+                    <button class="category-btn" data-category="Classics">
+                        <i class="fas fa-trophy"></i>
+                        Classics
+                    </button>
+                    <button class="category-btn" data-category="FPS">
+                        <i class="fas fa-crosshairs"></i>
+                        FPS
+                    </button>
+                    <button class="category-btn" data-category="Horror">
+                        <i class="fas fa-ghost"></i>
+                        Horror
+                    </button>
+                    <button class="category-btn" data-category="Indie">
+                        <i class="fas fa-lightbulb"></i>
+                        Indie
+                    </button>
+                    <button class="category-btn" data-category="Open World">
+                        <i class="fas fa-map"></i>
+                        Open World
+                    </button>
+                    <button class="category-btn" data-category="Popular">
+                        <i class="fas fa-fire"></i>
+                        Popular
+                    </button>
+                    <button class="category-btn" data-category="PS2">
+                        <i class="fas fa-gamepad"></i>
+                        PS2
+                    </button>
+                    <button class="category-btn" data-category="Racing">
+                        <i class="fas fa-flag-checkered"></i>
+                        Racing
+                    </button>
+                    <button class="category-btn" data-category="Remastered">
+                        <i class="fas fa-sync-alt"></i>
+                        Remastered
+                    </button>
+                    <button class="category-btn" data-category="RPG">
+                        <i class="fas fa-hat-wizard"></i>
+                        RPG
+                    </button>
+                    <button class="category-btn" data-category="Simulation">
+                        <i class="fas fa-cogs"></i>
+                        Simulation
+                    </button>
+                    <button class="category-btn" data-category="Small Games">
+                        <i class="fas fa-dice"></i>
+                        Small Games
+                    </button>
+                    <button class="category-btn" data-category="Sports">
+                        <i class="fas fa-basketball-ball"></i>
+                        Sports
+                    </button>
+                    <button class="category-btn" data-category="Virtual Reality">
+                        <i class="fas fa-vr-cardboard"></i>
+                        Virtual Reality
+                    </button>
+                </div>
+            </section>
+
+            <!-- Sorting Section -->
+            <section class="sorting-section">
+                <div class="sorting-controls">
+                    <select id="sort-select" class="sort-dropdown">
+                        <option value="a-z">A to Z</option>
+                        <option value="z-a">Z to A</option>
+                        <option value="category">By Category</option>
+                    </select>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Search games...">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Games Count -->
+            <div class="games-stats">
+                <h3 id="games-count">Showing all 300+ games</h3>
+            </div>
+
+            <!-- Games Grid -->
+            <section class="games-section">
+                <div id="games-grid" class="games-grid"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Load main script first to get gamesDatabase -->
+    <script src="script.js"></script>
+    <!-- Then load all-games specific script -->
+    <script src="all-games-script.js"></script>
+</body>
+
+</html>

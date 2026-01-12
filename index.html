@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCGameFit - Find Your Perfect PC Games</title>
+    <meta name="description"
+        content="Check which PC games your laptop can run. Select your specifications and get personalized game recommendations across 18+ categories with 300+ games.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-gradient"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="site-branding">
+                    <div class="logo-container">
+                        <img src="C:/Users/HP/.gemini/antigravity/brain/27dfacca-71d6-453e-8db1-bc2455904468/pcgamefit_logo_1768199768286.png"
+                            alt="PCGameFit Logo" class="site-logo">
+                        <h1 class="site-title">
+                            <span class="title-gradient">PC</span><span class="title-accent">Game</span><span
+                                class="title-pro">Fit</span>
+                        </h1>
+                    </div>
+                    <p class="site-subtitle">Find Your Perfect PC Games - Instantly Check Compatibility</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Specification Selection Section -->
+            <section class="spec-section glass-card">
+                <h2 class="section-title">
+                    <span class="title-icon">⚙️</span>
+                    Your PC Specifications
+                </h2>
+
+                <div class="spec-grid">
+                    <!-- RAM Selection -->
+                    <div class="spec-group">
+                        <label class="spec-label">
+                            <span class="label-icon">💾</span>
+                            RAM Memory
+                        </label>
+                        <select id="ram-select" class="spec-select">
+                            <option value="">Select RAM</option>
+                            <option value="4">4 GB</option>
+                            <option value="8">8 GB</option>
+                            <option value="16">16 GB</option>
+                            <option value="32">32 GB</option>
+                            <option value="64">64 GB</option>
+                        </select>
+                    </div>
+
+                    <!-- Storage Selection -->
+                    <div class="spec-group">
+                        <label class="spec-label">
+                            <span class="label-icon">💿</span>
+                            Storage Space
+                        </label>
+                        <select id="storage-select" class="spec-select">
+                            <option value="">Select Storage</option>
+                            <option value="256">256 GB</option>
+                            <option value="512">512 GB</option>
+                            <option value="1024">1 TB</option>
+                            <option value="2048">2 TB</option>
+                        </select>
+                    </div>
+
+                    <!-- GPU Selection -->
+                    <div class="spec-group">
+                        <label class="spec-label">
+                            <span class="label-icon">🎨</span>
+                            Graphics Card
+                        </label>
+                        <select id="gpu-select" class="spec-select">
+                            <option value="">Select GPU</option>
+                            <option value="1">Intel UHD Graphics</option>
+                            <option value="1.5">Intel Iris Xe Graphics</option>
+                            <option value="2">GTX 1050 / MX450 / MX550</option>
+                            <option value="2.5">GTX 1060 / MX570</option>
+                            <option value="3">GTX 1650 / RX 5500M</option>
+                            <option value="3.5">GTX 1660 Ti / RX 5600M</option>
+                            <option value="4">RTX 2060 / RTX 3050 / RX 6600M</option>
+                            <option value="5">RTX 3060 / RX 6700M</option>
+                            <option value="5.5">RTX 3070 / RX 6800M</option>
+                            <option value="6">RTX 4060 / RX 7600M</option>
+                            <option value="7">RTX 4070+ / RX 7700M+</option>
+                        </select>
+                    </div>
+
+                    <!-- CPU Selection -->
+                    <div class="spec-group">
+                        <label class="spec-label">
+                            <span class="label-icon">🔧</span>
+                            Processor
+                        </label>
+                        <select id="cpu-select" class="spec-select">
+                            <option value="">Select CPU</option>
+                            <option value="1">Intel i3 / Ryzen 3</option>
+                            <option value="2">Intel i5 / Ryzen 5</option>
+                            <option value="3">Intel i7 / Ryzen 7</option>
+                            <option value="4">Intel i9 / Ryzen 9</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="check-compatibility" class="btn-primary" disabled>
+                    <span class="btn-icon">🔍</span>
+                    Check Compatible Games
+                </button>
+
+                <!-- Browse All Games Button - Moved Here -->
+                <a href="all-games.html" class="browse-all-btn-secondary">
+                    <i class="fas fa-list"></i>
+                    Browse All Games
+                    <span class="game-count">300+ Games</span>
+                </a>
+            </section>
+
+            <!-- Category Filter Section -->
+            <section class="category-section" id="category-section" style="display: none;">
+                <h2 class="section-title">
+                    <span class="title-icon">🎯</span>
+                    Game Categories
+                </h2>
+
+                <div class="category-grid">
+                    <button class="category-btn active" data-category="all">
+                        <span class="category-icon">🌟</span>
+                        All Games
+                    </button>
+                    <button class="category-btn" data-category="Action">
+                        <span class="category-icon">⚔️</span>
+                        Action
+                    </button>
+                    <button class="category-btn" data-category="Adult">
+                        <span class="category-icon">🔞</span>
+                        Adult
+                    </button>
+                    <button class="category-btn" data-category="Adventure">
+                        <span class="category-icon">🗺️</span>
+                        Adventure
+                    </button>
+                    <button class="category-btn" data-category="Anime">
+                        <span class="category-icon">🎌</span>
+                        Anime
+                    </button>
+                    <button class="category-btn" data-category="Classics">
+                        <span class="category-icon">👾</span>
+                        Classics
+                    </button>
+                    <button class="category-btn" data-category="FPS">
+                        <span class="category-icon">🎯</span>
+                        FPS
+                    </button>
+                    <button class="category-btn" data-category="Horror">
+                        <span class="category-icon">👻</span>
+                        Horror
+                    </button>
+                    <button class="category-btn" data-category="Indie">
+                        <span class="category-icon">💡</span>
+                        Indie
+                    </button>
+                    <button class="category-btn" data-category="Open World">
+                        <span class="category-icon">🌍</span>
+                        Open World
+                    </button>
+                    <button class="category-btn" data-category="Popular">
+                        <span class="category-icon">🔥</span>
+                        Popular
+                    </button>
+                    <button class="category-btn" data-category="PS2">
+                        <span class="category-icon">🕹️</span>
+                        PS2
+                    </button>
+                    <button class="category-btn" data-category="Racing">
+                        <span class="category-icon">🏎️</span>
+                        Racing
+                    </button>
+                    <button class="category-btn" data-category="Remastered">
+                        <span class="category-icon">✨</span>
+                        Remastered
+                    </button>
+                    <button class="category-btn" data-category="RPG">
+                        <span class="category-icon">🐉</span>
+                        RPG
+                    </button>
+                    <button class="category-btn" data-category="Simulation">
+                        <span class="category-icon">🎲</span>
+                        Simulation
+                    </button>
+                    <button class="category-btn" data-category="Small Games">
+                        <span class="category-icon">🎮</span>
+                        Small Games
+                    </button>
+                    <button class="category-btn" data-category="Sports">
+                        <span class="category-icon">⚽</span>
+                        Sports
+                    </button>
+                    <button class="category-btn" data-category="Virtual Reality">
+                        <span class="category-icon">🥽</span>
+                        VR
+                    </button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="results-section" style="display: none;">
+                <div class="results-header">
+                    <h2 class="section-title">
+                        <span class="title-icon">🎮</span>
+                        <span id="results-title">Compatible Games</span>
+                    </h2>
+                    <div class="results-stats" id="results-stats"></div>
+                </div>
+
+                <div class="compatibility-legend">
+                    <div class="legend-item">
+                        <span class="legend-badge optimal">Optimal</span>
+                        <span class="legend-text">Ultra/High Settings</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-badge recommended">Recommended</span>
+                        <span class="legend-text">Medium/High Settings</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-badge minimum">Playable</span>
+                        <span class="legend-text">Low/Medium Settings</span>
+                    </div>
+                </div>
+
+                <div class="games-grid" id="games-grid"></div>
+
+                <div class="no-results" id="no-results" style="display: none;">
+                    <div class="no-results-icon">😔</div>
+                    <h3>No Compatible Games Found</h3>
+                    <p>Try adjusting your specifications or selecting a different category.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 PCGameFit. System requirements are approximate and may vary.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
